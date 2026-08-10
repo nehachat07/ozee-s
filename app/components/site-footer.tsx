@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { StaggerFadeIn } from "./animations";
+import Image from "next/image";
 
 export default function SiteFooter() {
   return (
@@ -14,19 +15,13 @@ export default function SiteFooter() {
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.3 }}
           >
-            <motion.div
-              whileHover={{ rotate: 10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="w-14 h-14 rounded-full border-2 border-[#E6C665] bg-gradient-to-br from-[#F7DC8D] via-[#E6C665] to-[#C49B28] text-[#0B0806] font-serif text-3xl font-black shadow-xl shadow-[#E6C665]/40 flex items-center justify-center mb-1.5"
-            >
-              O
-            </motion.div>
-            <span className="font-serif text-4xl font-black tracking-[0.22em] bg-gradient-to-r from-[#FFF0B3] via-[#E6C665] to-[#D4AF37] bg-clip-text text-transparent drop-shadow-lg">
-              OZEE&apos;S
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.38em] text-[#E6C665] font-bold mt-1">
-              Crafted with Love • Made Like Home
-            </span>
+            <Image
+              src="/ozees-logo.png"
+              alt="Ozee's — Crafted With Love, Made Like Home"
+              width={260}
+              height={260}
+              className="object-contain drop-shadow-[0_0_12px_rgba(230,198,101,0.35)] group-hover:drop-shadow-[0_0_20px_rgba(230,198,101,0.55)] transition-all duration-300"
+            />
           </motion.div>
         </StaggerFadeIn>
 

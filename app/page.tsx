@@ -505,7 +505,6 @@ export default function Home() {
               <span>✦ Egg & Eggless Options Available</span>
               <span>✦ Custom Celebration Cakes</span>
               <span>✦ WhatsApp: +91 99009 51492</span>
-              <span>✦ www.ozees.in</span>
             </span>
           ))}
         </motion.div>
@@ -526,15 +525,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
           
           <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
-            <StaggerFadeIn delay={0}>
-              <div className="inline-flex items-center gap-3 bg-[#1D150E] border border-[#3B2B1D] px-4 py-1.5 rounded-full">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E6C665] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#E6C665]"></span>
-                </span>
-                <span className="text-[#E6C665] text-xs font-semibold uppercase tracking-[0.25em]">Artisanal Homemade Bakery</span>
-              </div>
-            </StaggerFadeIn>
+
 
             <div>
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-[#F5EFE6] leading-[1.08] tracking-tight">
@@ -544,7 +535,7 @@ export default function Home() {
                   transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                   className="block"
                 >
-                  Crafted with Love.
+                  Handcrafted with intention.
                 </motion.span>
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
@@ -552,14 +543,14 @@ export default function Home() {
                   transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   className="italic font-normal text-[#E6C665]"
                 >
-                  Made Like Home.
+                  Baked for moments worth savouring.
                 </motion.span>
               </h1>
             </div>
 
             <StaggerFadeIn delay={0.5}>
               <p className="text-base sm:text-lg text-[#C7B7A7] font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Welcome to <span className="font-semibold text-[#F5EFE6]">Ozee&apos;s</span>. Every cupcake, teacake, cookie, cheesecake, donut, and creamy yogurt is handcrafted in small batches using pure, premium ingredients.
+                Welcome to <span className="font-semibold text-[#F5EFE6]">Ozee&apos;s</span>! Where home-baked goodness meets handcrafted indulgence, made in small batches with premium ingredients and love.
               </p>
             </StaggerFadeIn>
 
@@ -723,7 +714,7 @@ export default function Home() {
             </StaggerFadeIn>
             <StaggerFadeIn delay={0.1}>
               <p>
-                As a mother, I discovered that the happiest moments in life are often the simplest — watching a cake rise in the oven, decorating cupcakes together, or sharing sweet treats around the table with family and friends. Those moments taught me that baking is more than recipes; it is a way of expressing love, creating memories, and bringing people together.
+                As a mother, I discovered that the happiest moments in life are often the simplest - watching a cake rise in the oven, decorating cupcakes together, or sharing sweet treats around the table with family and friends. Those moments taught me that baking is more than recipes; it is a way of expressing love, creating memories, and bringing people together.
               </p>
             </StaggerFadeIn>
             <StaggerFadeIn delay={0.2}>
@@ -735,7 +726,7 @@ export default function Home() {
             </StaggerFadeIn>
             <StaggerFadeIn delay={0.3}>
               <p>
-                Inspired by the <span className="font-semibold text-[#F5EFE6]">Trident</span> in our logo — a symbol of strength, balance, and unwavering commitment — we craft every treat with equal devotion to purity, creativity, and care. At Ozee&apos;s, we don&apos;t just bake desserts; we create meaningful moments, one handcrafted bite at a time.
+                Two circles, one beautiful connection - between the warmth of home and the joy of handcrafted indulgence. Every Ozee&apos;s creation begins with that connection: thoughtfully made, lovingly baked, and meant to bring a little happiness to your table.
               </p>
             </StaggerFadeIn>
           </div>
@@ -768,10 +759,10 @@ export default function Home() {
           <StaggerFadeIn className="text-center max-w-3xl mx-auto space-y-4 mb-12">
             <span className="text-[#E6C665] text-xs uppercase tracking-[0.3em] font-semibold">Handcrafted Catalogue</span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#F5EFE6]">
-              Our Artisanal Bake Collection
+              Discover Your Ozee&apos;s Favourite
             </h2>
             <p className="text-[#C7B7A7] font-light text-base sm:text-lg">
-              Explore our fresh small-batch cupcakes, teacakes, cookies, cheesecakes, donuts, yogurts, and custom celebration cakes.
+              Explore Ozee&apos;s world of handcrafted indulgence - from freshly baked cupcakes and delicate teacakes to decadent cheesecakes, irresistible donuts, creamy yogurts, and celebration cakes made just for your special moments.
             </p>
           </StaggerFadeIn>
 

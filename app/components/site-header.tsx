@@ -14,7 +14,7 @@ const wa = (item?: string) => {
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-[#0B0806]/90 backdrop-blur-xl border-b border-[#261D16] transition-all">
-      <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between pt-4">
         {/* Brand Logo (Vibrant Metallic Golden) */}
         <Link href="/" className="flex items-center group transition-transform hover:scale-105">
           <Image
@@ -33,13 +33,10 @@ export default function SiteHeader() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6C665] transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link href="/#menu" className="hover:text-[#E6C665] transition-colors relative py-1 group">
-            Bake Collection
+            The Oz&apos;s Universe
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6C665] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/blog" className="hover:text-[#E6C665] transition-colors relative py-1 group">
-            Blog
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6C665] transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+
           <Link href="/#ordering" className="hover:text-[#E6C665] transition-colors relative py-1 group">
             Ordering Process
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6C665] transition-all duration-300 group-hover:w-full"></span>

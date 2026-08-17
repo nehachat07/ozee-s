@@ -13,8 +13,8 @@ const wa = (item?: string) => {
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 bg-[#0B0806]/90 backdrop-blur-xl border-b border-[#261D16] transition-all">
-      <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between pt-4">
+    <header className="bg-[#0B0806]/90 backdrop-blur-xl border-b border-[#261D16] transition-all">
+      <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
         {/* Brand Logo (Vibrant Metallic Golden) */}
         <Link href="/" className="flex items-center group transition-transform hover:scale-105">
           <Image

@@ -425,31 +425,7 @@ export default function Home() {
     },
 
     // 7. CELEBRATION CAKES
-    {
-      id: "cake-0",
-      name: "Custom Celebration & Theme Cakes",
-      desc: "Bespoke handcrafted cakes tailored for birthdays and anniversaries with custom theme sculpting and artistic buttercream.",
-      diet: "both",
-      img: "/WhatsApp Image 2026-07-31 at 4.55.09 PM (18).jpeg",
-      images: [
-        "/WhatsApp Image 2026-07-31 at 4.55.09 PM (18).jpeg",
-        "/WhatsApp Image 2026-07-31 at 5.04.43 PM (2).jpeg"
-      ],
-      category: "Celebration Cakes",
-      flavors: [
-        "Plain Sweet Vanilla",
-        "Chocolate",
-        "Pineapple",
-        "Mixed Fruits",
-        "Customised Cream / Buttercream",
-        "Fondant Celebration",
-        "Ferrero Rocher",
-        "Chocolate Truffle",
-        "Black Forest"
-      ],
-      tag: "Custom Bespoke"
-    },
-    {
+
       id: "cake-cricket",
       name: "Sporty Cricket Cake",
       desc: "Customised cricket-themed cake, crafted to make the special moments unforgettable!",
@@ -554,27 +530,29 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0B0806] text-[#F5EFE6] font-sans selection:bg-[#E6C665]/30">
 
-      {/* Top Banner — Marquee */}
-      <div className="bg-[#050403] text-[#E6C665] text-[11px] uppercase tracking-[0.25em] font-medium py-2.5 border-b border-[#211811] overflow-hidden">
-        <motion.div
-          className="flex gap-12 whitespace-nowrap"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-        >
-          {[0, 1].map((i) => (
-            <span key={i} className="flex gap-12 shrink-0">
-              <span>✦ Handcrafted Small-Batch Bakery</span>
-              <span>✦ Made Fresh Like Home</span>
-              <span>✦ Egg & Eggless Options Available</span>
-              <span>✦ Custom Celebration Cakes</span>
-              <span>✦ WhatsApp: +91 99009 51492</span>
-            </span>
-          ))}
-        </motion.div>
+      {/* Top Banner + Sticky Header — wrapped together so they stay as one sticky unit */}
+      <div className="sticky top-0 z-50">
+        {/* Scrolling Announcement Bar */}
+        <div className="bg-[#050403] text-[#E6C665] text-[11px] uppercase tracking-[0.25em] font-medium py-2.5 border-b border-[#211811] overflow-hidden">
+          <motion.div
+            className="flex gap-12 whitespace-nowrap"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+          >
+            {[0, 1].map((i) => (
+              <span key={i} className="flex gap-12 shrink-0">
+                <span>✦ Handcrafted Small-Batch Bakery</span>
+                <span>✦ Made Fresh Like Home</span>
+                <span>✦ Egg &amp; Eggless Options Available</span>
+                <span>✦ Custom Celebration Cakes</span>
+                <span>✦ WhatsApp: +91 99009 51492</span>
+              </span>
+            ))}
+          </motion.div>
+        </div>
+        {/* Luxury Sticky Header (Dark Obsidian Glass) */}
+        <SiteHeader />
       </div>
-
-      {/* Luxury Sticky Header (Dark Obsidian Glass) */}
-      <SiteHeader />
 
       {/* Hero Showcase Section */}
       <section className="relative py-20 lg:py-28 overflow-hidden border-b border-[#261D16] bg-gradient-to-b from-[#090705] via-[#0F0B08] to-[#15100B]">
@@ -642,19 +620,19 @@ export default function Home() {
 
             <StaggerFadeIn delay={0.8}>
               <div className="pt-8 border-t border-[#261D16] flex items-center justify-center lg:justify-start gap-8 text-xs text-[#A89889]">
-                <div className="text-center">
-                  <span className="block font-bold text-[#F5EFE6] text-lg"><AnimatedCounter end={100} suffix="%" /></span>
-                  <span>Small Batch</span>
+                <div className="text-center space-y-1">
+                  <span className="block text-[#E6C665] text-lg font-bold">✦</span>
+                  <span className="block text-[#F5EFE6] font-semibold tracking-wide">Curated Bakes</span>
                 </div>
                 <div className="h-8 w-px bg-[#261D16]"></div>
-                <div className="text-center">
-                  <span className="block font-bold text-[#F5EFE6] text-lg"><AnimatedCounter end={7} suffix="+" /></span>
-                  <span>Bake Categories</span>
+                <div className="text-center space-y-1">
+                  <span className="block text-[#E6C665] text-lg font-bold">✦</span>
+                  <span className="block text-[#F5EFE6] font-semibold tracking-wide">Premium Ingredients</span>
                 </div>
                 <div className="h-8 w-px bg-[#261D16]"></div>
-                <div className="text-center">
-                  <span className="block font-bold text-[#F5EFE6] text-lg"><AnimatedCounter end={500} suffix="+" /></span>
-                  <span>Happy Customers</span>
+                <div className="text-center space-y-1">
+                  <span className="block text-[#E6C665] text-lg font-bold">✦</span>
+                  <span className="block text-[#F5EFE6] font-semibold tracking-wide">Made Personally for You</span>
                 </div>
               </div>
             </StaggerFadeIn>
@@ -855,6 +833,42 @@ export default function Home() {
               </motion.button>
             ))}
           </StaggerFadeIn>
+
+          {/* Celebration Cakes — General Category Description (shown when filter active) */}
+          {activeCategory === "Celebration Cakes" && (
+            <motion.div
+              key="celebration-info"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="mb-12 bg-[#140F0C] border border-[#2B2119] rounded-3xl p-8 text-center"
+            >
+              <p className="text-[#C7B7A7] text-base sm:text-lg font-light leading-relaxed mb-6">
+                Bespoke handcrafted cakes tailored for birthdays and anniversaries with custom theme sculpting and artistic buttercream.
+              </p>
+              <div>
+                <span className="text-[#E6C665] text-[10px] uppercase tracking-[0.3em] font-semibold block mb-4">Available Flavours</span>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[
+                    "Plain Sweet Vanilla",
+                    "Chocolate",
+                    "Pineapple",
+                    "Mixed Fruits",
+                    "Customised Cream / Buttercream",
+                    "Fondant Celebration",
+                    "Ferrero Rocher",
+                    "Chocolate Truffle",
+                    "Black Forest"
+                  ].map((flv) => (
+                    <span key={flv} className="bg-[#241B14] text-[#E5D6C5] border border-[#3D2F23] text-[10px] px-2.5 py-1 rounded-full font-medium">
+                      {flv}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
 
           {/* Catalog Grid */}
           <AnimatePresence mode="popLayout">

@@ -61,10 +61,10 @@ export default function SiteFooter() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-xs text-[#8A7A6C] hover:text-[#E6C665] transition-colors group"
             >
-              {/* Instagram QR Scanner — tinted to match gold logo palette */}
+              {/* Instagram QR Scanner — golden on black, large enough to scan */}
               <div
-                className="relative shrink-0 overflow-hidden rounded-sm border border-[#E6C665]/40 group-hover:border-[#E6C665]/80 transition-colors"
-                style={{ width: "38px", height: "38px" }}
+                className="relative shrink-0 overflow-hidden rounded-md border border-[#E6C665]/60 group-hover:border-[#E6C665] transition-colors"
+                style={{ width: "72px", height: "72px", backgroundColor: "#000000" }}
               >
                 <Image
                   src="/ozees-instagram-scanner.jpg"
@@ -72,8 +72,7 @@ export default function SiteFooter() {
                   fill
                   className="object-contain"
                   style={{
-                    filter:
-                      "sepia(1) saturate(3) hue-rotate(5deg) brightness(0.9) contrast(1.1)",
+                    filter: "invert(1) sepia(1) saturate(2.5) hue-rotate(5deg) brightness(1.05)",
                   }}
                 />
               </div>

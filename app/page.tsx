@@ -122,9 +122,8 @@ function ProductCard({ item, wa, index = 0 }: { item: Product; wa: (name?: strin
               whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
               onClick={() => setCurrentImg(imgUrl)}
-              className={`relative w-10 h-10 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${
-                currentImg === imgUrl ? "border-[#E6C665] shadow-md ring-2 ring-[#E6C665]/30" : "border-[#33261C] opacity-60 hover:opacity-100"
-              }`}
+              className={`relative w-10 h-10 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${currentImg === imgUrl ? "border-[#E6C665] shadow-md ring-2 ring-[#E6C665]/30" : "border-[#33261C] opacity-60 hover:opacity-100"
+                }`}
             >
               <Image src={imgUrl} alt={`${item.name} - ${item.category} view ${idx + 1}`} fill className="object-cover" />
             </motion.button>
@@ -426,6 +425,7 @@ export default function Home() {
 
     // 7. CELEBRATION CAKES
 
+    {
       id: "cake-cricket",
       name: "Sporty Cricket Cake",
       desc: "Customised cricket-themed cake, crafted to make the special moments unforgettable!",
@@ -564,12 +564,12 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
-          
+
           <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
 
 
             <div>
-              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-[#F5EFE6] leading-[1.08] tracking-tight">
+              <h1 className="font-serif text-[2.75rem] sm:text-5xl lg:text-6xl font-bold text-[#F5EFE6] leading-[1.08] tracking-tight">
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -648,15 +648,15 @@ export default function Home() {
                 className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#241A13] group"
               >
                 <Image
-                  src="/WhatsApp Image 2026-07-31 at 4.55.09 PM (23).jpeg"
-                  alt="Berry Crown Cupcakes Showcase - Ozee's Bakery Bangalore"
+                  src="/Fresh Fruit Gateau 1.jpeg"
+                  alt="Fresh Fruit Gateau - Ozee's Bakery Bangalore"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4 flex items-end">
-                  <span className="text-white text-xs font-semibold tracking-wider uppercase">Berry Crown Cupcakes</span>
+                  <span className="text-white text-xs font-semibold tracking-wider uppercase">Fresh Fruit Gateau</span>
                 </div>
                 <div className="absolute inset-0 ring-inset ring-2 ring-[#E6C665]/0 group-hover:ring-[#E6C665]/30 rounded-3xl transition-all duration-500" />
               </motion.div>
@@ -667,8 +667,8 @@ export default function Home() {
                 className="relative aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-[#241A13] group"
               >
                 <Image
-                  src="/WhatsApp Image 2026-07-31 at 4.55.09 PM (14).jpeg"
-                  alt="Hazelnut Heaven Teacake - Ozee's Bakery Bangalore"
+                  src="/Opera.jpeg"
+                  alt="Opera Cake - Ozee's Bakery Bangalore"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -684,8 +684,8 @@ export default function Home() {
                 className="relative aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-[#241A13] group"
               >
                 <Image
-                  src="/images (7).jpg"
-                  alt="Biscoff Bliss Cheesecake Showcase - Ozee's Bakery Bangalore"
+                  src="/Tiramisu 1.jpeg"
+                  alt="Tiramisu - Ozee's Bakery Bangalore"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -699,8 +699,8 @@ export default function Home() {
                 className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-[#241A13] group"
               >
                 <Image
-                  src="/WhatsApp Image 2026-07-31 at 4.55.09 PM (22).jpeg"
-                  alt="Blue Velvet Creamy Yogurt Showcase - Ozee's Bakery Bangalore"
+                  src="/Butter Cream 1.png"
+                  alt="Butter Cream Cake - Ozee's Bakery Bangalore"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -720,7 +720,7 @@ export default function Home() {
           <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#E6C665]/4 blur-[100px]" />
         </div>
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
-          
+
           <StaggerFadeIn delay={0}>
             <div className="inline-flex items-center gap-3">
               <motion.span
@@ -796,7 +796,7 @@ export default function Home() {
           <FloatingParticles count={3} color="#E6C665" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          
+
           <StaggerFadeIn className="text-center max-w-3xl mx-auto space-y-4 mb-12">
             <span className="text-[#E6C665] text-xs uppercase tracking-[0.3em] font-semibold">Handcrafted Catalogue</span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold text-[#F5EFE6]">
@@ -816,11 +816,10 @@ export default function Home() {
                 onClick={() => setActiveCategory(cat)}
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors duration-200 relative overflow-hidden ${
-                  activeCategory === cat
-                    ? "bg-gradient-to-r from-[#F7DC8D] via-[#E6C665] to-[#D4AF37] text-[#0B0806] font-black shadow-lg shadow-[#E6C665]/30"
-                    : "bg-[#18110D] border border-[#2B2018] text-[#C7B7A7] hover:border-[#E6C665]/60 hover:text-[#E6C665]"
-                }`}
+                className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors duration-200 relative overflow-hidden ${activeCategory === cat
+                  ? "bg-gradient-to-r from-[#F7DC8D] via-[#E6C665] to-[#D4AF37] text-[#0B0806] font-black shadow-lg shadow-[#E6C665]/30"
+                  : "bg-[#18110D] border border-[#2B2018] text-[#C7B7A7] hover:border-[#E6C665]/60 hover:text-[#E6C665]"
+                  }`}
               >
                 {activeCategory === cat && (
                   <motion.span
@@ -903,7 +902,7 @@ export default function Home() {
           <FloatingParticles count={2} color="#E6C665" />
         </div>
         <div className="max-w-7xl mx-auto px-6 text-center space-y-8 relative z-10">
-          
+
           <StaggerFadeIn>
             <span className="text-[#E6C665] text-xs uppercase tracking-[0.3em] font-semibold">Bespoke Celebrations</span>
             <h2 className="font-serif text-4xl sm:text-5xl font-bold mt-2">Have a Custom Theme in Mind?</h2>
@@ -939,7 +938,7 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-10 items-stretch">
-            
+
             <StaggerFadeIn delay={0} className="lg:col-span-7">
               <div className="bg-[#18110D] p-8 sm:p-12 rounded-3xl border border-[#2B2018] shadow-sm flex flex-col justify-between space-y-6 h-full">
                 <div>
